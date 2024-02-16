@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="images/fav-home.svg" >
+    <title>Welcome, Home</title>
+    <link rel="stylesheet" href="styles/cascade.css">
+</head>
+<body>
+    <div class="container-theme">
+        <div>
+            <form onsubmit="return themeSelecter();" class="theme-form">
+                <select name="theme-options" id="themes" class="theme-list">
+                    <option value="Dark">Dark</option>
+                    <option value="Light">Light</option>
+                    <option value="Custom">Custom</option>
+                </select>
+                <button type="submit">Apply</button>
+            </form>
+            <script>
+                function themeSelecter(){
+                    let value = document.getElementById("theme-options").value;
+                    if (value == "Dark") {
+                        document.body.style.backgroundColor = "#00000"
+                        document.body.style.color = "black"
+                    } else if(value == "Light") {
+                        document.body.style.background = "white"
+                        document.body.style.color = "purple"
+                    }
+                }
+            </script>
+        </div>
+
+    </div>
+    <header>
+
+    </header>
+
+    <main>
+        
+        <div class="container-time-date">
+            <span id="time"></span><br>
+            <span id="date"></span>
+            <script>
+                function dateAndTime(){
+                    let now = new Date();
+                    let options = {timeStyle: 'short',hour12: true};
+                    let currentTime = now.toLocaleTimeString('en-US',options);
+                    let currentDate = now.toDateString();
+                    document.getElementById('time').textContent = currentTime;
+                    document.getElementById('date').textContent = currentDate;
+                }
+                setInterval(dateAndTime(),1000);
+            </script>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+   
+</body>
+</html>
+

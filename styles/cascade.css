@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;   
+}
+
+.custom-bg-container{
+    display: none;
+}
+
+.container-time-date{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+.container-time-date span{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5vh;
+    font-weight: bolder;
+}
